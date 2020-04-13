@@ -8,7 +8,7 @@
     <script src="js/game_of_life.js"></script>
 </head>
 
-<body>
+<body style="background-color: black;">
 
     <script>
         const twitchPass = '{{$twitchPass}}';

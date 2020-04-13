@@ -13,9 +13,9 @@ twitchChat.addEventListener('message', event => {
     }
 
     commands.forEach(command => {
-        const regex = new RegExp(`${command} *.*`)
+        const regex = new RegExp(`${command.trigger} .*.*`)
         const rawCommand = event.data.match(regex);
-        if (rawCommand) command.callback(rawCommand[0].replace(`${command}`, ''));
+        if (rawCommand) command.callback(rawCommand[0].replace(`${command.trigger} `, ''));
     });
 });
 
